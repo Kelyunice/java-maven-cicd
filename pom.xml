@@ -10,8 +10,8 @@
 
     <distributionManagement>
         <snapshotRepository>
-           <id>maven-releases</id>
-           <url>http://35.180.250.231:8081/repository/maven-releases/</url>
+           <id>maven-snapshots</id>
+           <url>http://35.180.250.231:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
      
