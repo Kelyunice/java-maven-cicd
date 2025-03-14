@@ -63,21 +63,21 @@ pipeline {
             steps {
                 script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                            sh "docker build -t ebonje/java-maven-app:1.5 ."
+                            sh "docker build -t ebonje/java-maven-app:1.6 ."
                    }    
                 }     
             } 
         }
         stage('Docker Scan Image') {
             steps {
-                sh "trivy image ebonje/java-maven-app:1.5"
+                sh "trivy image ebonje/java-maven-app:1.6"
             }
         }
         stage('Push Docker Image') {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                    sh "docker push ebonje/java-maven-app:1.5"
+                    sh "docker push ebonje/java-maven-app:1.6"
                     }
                 } 
             }
