@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment 
 metadata:
   name: java-maven-app-deployment
+  namespace: webapp
 spec:
   selector:
     matchLabels:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: java-maven-app
-          image: ebonje/java-maven-app:1.0 # this image will be used by containers in the cluster
+          image: kelyunice1419/java-maven-app:1.0 # this image will be used by containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
@@ -26,6 +27,7 @@ apiVersion: v1
 kind: Service 
 metadata: 
   name: java-maven-app-svc
+  namespace: webapp
 spec:
   selector:
     app: java-maven-app
