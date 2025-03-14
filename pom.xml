@@ -10,7 +10,7 @@
 
     <distributionManagement>
         <snapshotRepository>
-           <id>nexus-snapshots</id>
+           <id>maven-snapshots</id>
            <url>http://13.212.85.149:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
