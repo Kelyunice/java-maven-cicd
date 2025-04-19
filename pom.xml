@@ -11,7 +11,7 @@
     <distributionManagement>
         <snapshotRepository>
            <id>maven-snapshots</id>
-           <url>http://13.212.85.149:8081/repository/maven-snapshots/</url>
+           <url>http://18.139.160.202:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
      
