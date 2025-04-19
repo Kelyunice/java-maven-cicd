@@ -2,6 +2,8 @@ pipeline {
     agent { 
         docker {
             image 'maven:3-alpine'
+       }    
+    }
     
     tools {
         jdk 'jdk17'
@@ -102,4 +104,3 @@ pipeline {
              }
         }
      }
- }   
