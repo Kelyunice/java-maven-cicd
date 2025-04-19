@@ -76,7 +76,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
+                    withDockerRegistry(credentialsId: 'docker-cred2', toolName: 'docker') {
                     sh "docker push kelyunice1419/java-maven-app:2.0"
                     }
                 } 
