@@ -64,6 +64,8 @@ pipeline {
                 script {
                    withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                             sh "docker build -t kelyunice1419/java-maven-app:2.0 ."
+
+                          
                    }    
                 }     
             } 
@@ -71,6 +73,7 @@ pipeline {
         stage('Docker Scan Image') {
             steps {
                 sh "trivy image kelyunice1419/java-maven-app:2.0"
+                
             }
         }
         stage('Push Docker Image') {
@@ -85,6 +88,7 @@ pipeline {
         stage('Deploy To Kubernetess') {
             steps {
                withKubeConfig(caCertificate: '', clusterName: ' kubernetes', contextName: '', credentialsId: 'k8-cred', namespace: 'webapp', restrictKubeConfigAccess: false, serverUrl: 'https://172.31.16.14:6443') {
+
                         sh "kubectl apply -f deployment.yaml"
                } 
             }
