@@ -1,5 +1,5 @@
 # MAVEN BUILD TOOL 
-# maven is written in xml so Maven uses xml but Gradle uses Groovy language both tool s have command line tool and commands to execute the tasks
+# maven is written in xml so Maven uses xml but Gradle uses Groovy language both tools have command line tools and commands to execute the tasks
 
 for java code we have Maven and Gradle
 This build tools install the dependencies and 
