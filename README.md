@@ -106,5 +106,5 @@ so we have to copy the Jar file into the docker image and then build the applica
 you are responsible for configuring the building of the artifact which should be automated using the cicd pipeline
 
 ## ARTEFACT REPOSITORY MANGER
-## NEXUS IS a repository manager that allow you to upload and store different build artifacts and to retrieve them when ever you need them (internally use private in the company)
+## NEXUS IS a repository manager that allow you to upload and store different build artifacts and to retrieve them when ever you need them (internally used privately, in some companies)
 Public repository managers like maven central repository
